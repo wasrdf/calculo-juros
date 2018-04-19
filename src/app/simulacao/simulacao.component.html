@@ -1,0 +1,27 @@
+<div class="ui-g-6">
+
+  <div class="ui-g">
+    <div class="ui-g-3">Valor:</div>
+    <div class="ui-g-3">
+      <input type="text" pInputText [(ngModel)]="emprestimo.valor" required style="width: 100%;" pInputText placeholder="0,00"
+        name="Valor" title="Valor">
+    </div>
+  </div>
+
+  <div class="ui-g">
+    <div class="ui-g-3">Duração</div>
+    <div class="ui-g-3">
+      <input type="text" pInputText [(ngModel)]="emprestimo.duracao" required style="width: 100%;" pInputText placeholder="Duração"
+        name="duracao" title="Duração">
+    </div>
+  </div>
+
+  <div class="ui-g-6">
+    <p-button title="Simular" label="Simular" (click)="simular()"></p-button>
+  </div>
+
+  <div class="ui-g-12">
+    <p-messages [(value)]="labelMsg"></p-messages>
+  </div>
+
+</div>
