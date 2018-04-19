@@ -6,6 +6,7 @@ import { EnderecoService } from '../service/endereco.service';
 import { Message } from 'primeng/components/common/message';
 import { ConfirmationService } from 'primeng/components/common/api';
 import { Validators, FormControl, FormGroup, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 
@@ -33,13 +34,16 @@ export class ClienteComponent implements OnInit {
   labelErro: Message[] = [];
 
 
-  constructor(private clienteService: ClienteService, private enderecoService: EnderecoService, private confirmationService: ConfirmationService) { }
+  constructor(private clienteService: ClienteService, private enderecoService: EnderecoService, private confirmationService: ConfirmationService,private router: Router) { }
 
   ngOnInit() {
     //carrega a lista de clientes
     this.listarPessoas();
   }
 
+  abrirSimulacao(c: Cliente) {
+    this.router.navigateByUrl("app-simulacao/"+c.codigo);
+  }
 
 
   novoCliente() {

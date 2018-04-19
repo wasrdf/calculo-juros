@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Emprestimo } from '../model/emprestimo.model';
 import { Cliente } from '../model/cliente.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { SimulacaoService } from '../service/simulacao.service';
 import { Message } from 'primeng/components/common/api';
 
@@ -18,10 +18,14 @@ export class SimulacaoComponent implements OnInit {
 
   labelMsg: Message[] = [];
 
-  constructor(private route: ActivatedRoute, private simulacaoService: SimulacaoService) { }
+  constructor(private route: ActivatedRoute, private simulacaoService: SimulacaoService,private router: Router) { }
 
   ngOnInit() {
 
+  }
+
+  voltar() {
+    this.router.navigateByUrl("/app-cliente");
   }
 
   simular() {

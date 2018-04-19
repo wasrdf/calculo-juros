@@ -47,8 +47,8 @@
 
   <div [hidden]="cliente.codigo === undefined" class="ui-g-12">
 
-    <a disable="true" routerLink="/app-simulacao/{{cliente.codigo}}" target="_blank" routerLinkActive="active">CLIQUE AQUI PARA REALIZAR UMA SIMULÇAO DE EMPRESTÍMO</a>
 
+    <p-button title="CLIQUE AQUI PARA REALIZAR UMA SIMULÇAO DE EMPRESTÍMO"  label="CLIQUE AQUI PARA REALIZAR UMA SIMULÇAO DE EMPRESTÍMO" (click)="abrirSimulacao(cliente)" ></p-button>
   </div>
 
   <div class="ui-g-12">
@@ -73,7 +73,7 @@
         <div class="ui-g">
           <div class="ui-g-6">Risco</div>
           <div class="ui-g-6">
-            
+
             <h3 style="color: blue">{{cliente.risco}}</h3>
 
           </div>

@@ -19,6 +19,7 @@ import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
 import { SimulacaoComponent } from './simulacao/simulacao.component';
 import { SimulacaoService } from './service/simulacao.service';
+import { LocationStrategy } from '@angular/common';
 
 
 
@@ -40,8 +41,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: false } // <-- debugging purposes only
+      appRoutes     
     ),
     TableModule,
     BrowserAnimationsModule,
@@ -55,7 +55,8 @@ const appRoutes: Routes = [
     
     
   ],
-  providers: [ClienteService , EnderecoService , ConfirmationService,SimulacaoService],
+  providers: [ClienteService , EnderecoService , ConfirmationService,SimulacaoService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
